@@ -1,0 +1,198 @@
+/**
+ * Input Field Text Visibility Fixes
+ * Ensures all text inputs have high contrast and readable text
+ */
+
+/* ===== Global Input Text Fixes ===== */
+input,
+textarea,
+select,
+.attendance-history-input,
+.attendance-history-select,
+.substitute-select,
+.login-input {
+  color: var(--color-text-primary) !important;
+  background-color: #ffffff !important;
+  -webkit-text-fill-color: var(--color-text-primary) !important;
+  opacity: 1 !important;
+  border: 1px solid var(--color-border) !important;
+}
+
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+  color: var(--color-text-tertiary) !important;
+  opacity: 0.7 !important;
+}
+
+/* Fix for autofill background */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: var(--color-text-primary) !important;
+  -webkit-box-shadow: 0 0 0 30px #ffffff inset !important;
+  box-shadow: 0 0 0 30px #ffffff inset !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+}
+
+/* Date input specific fixes */
+input[type="date"],
+input[type="datetime-local"],
+input[type="time"] {
+  color: var(--color-text-primary) !important;
+  -webkit-text-fill-color: var(--color-text-primary) !important;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="datetime-local"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.8);
+  cursor: pointer;
+}
+
+/* Select dropdown fixes */
+select,
+.attendance-history-select,
+.substitute-select {
+  color: var(--color-text-primary) !important;
+  background-color: #ffffff !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23334e68' d='M6 9L1 4h10z'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 0.75rem center !important;
+  background-size: 12px !important;
+  padding-right: 2.5rem !important;
+}
+
+select option {
+  background-color: #ffffff !important;
+  color: var(--color-text-primary) !important;
+}
+
+/* Textarea fixes */
+textarea {
+  color: var(--color-text-primary) !important;
+  background-color: #ffffff !important;
+  resize: vertical;
+}
+
+/* Date and time inputs */
+input[type="date"],
+input[type="datetime-local"],
+input[type="time"],
+.attendance-history-input {
+  color: var(--color-text-primary) !important;
+  background-color: #ffffff !important;
+  -webkit-text-fill-color: var(--color-text-primary) !important;
+}
+
+/* Disabled state - still readable */
+input:disabled,
+textarea:disabled,
+select:disabled {
+  color: var(--color-text-secondary) !important;
+  background-color: var(--color-background-tertiary) !important;
+  opacity: 0.7 !important;
+  cursor: not-allowed;
+}
+
+/* Focus state - high visibility */
+input:focus,
+textarea:focus,
+select:focus,
+.attendance-history-input:focus,
+.attendance-history-select:focus {
+  color: var(--color-text-primary) !important;
+  background-color: #ffffff !important;
+  border-color: var(--color-primary) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px var(--primary-100) !important;
+}
+
+/* Removed dark mode - using light theme only */
+
+/* Label text visibility */
+label {
+  color: var(--color-text-primary) !important;
+  font-weight: var(--font-weight-medium);
+}
+
+/* Form group text */
+.form-group label,
+.input-label,
+.form-label {
+  color: var(--color-text-primary) !important;
+}
+
+/* Error and helper text */
+.input-error-message,
+.error-message,
+.form-error {
+  color: var(--color-error) !important;
+}
+
+.input-hint,
+.form-hint,
+.help-text {
+  color: var(--color-text-secondary) !important;
+}
+
+/* Checkbox and radio labels */
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  color: var(--color-text-primary) !important;
+}
+
+/* Summary text */
+.summary,
+.summary-text {
+  color: var(--color-text-primary) !important;
+}
+
+/* Period checkbox labels */
+.period-checkbox label,
+.period-label {
+  color: var(--color-text-primary) !important;
+}
+
+/* Teacher selection text */
+.teacher-grid label,
+.teacher-card label,
+.teacher-name {
+  color: var(--color-text-primary) !important;
+}
+
+/* Substitute dropdown text */
+.substitute-select,
+.substitute-dropdown {
+  color: var(--color-text-primary) !important;
+  background-color: var(--color-surface) !important;
+}
+
+/* Quick action button text */
+.quick-action-btn,
+.action-button {
+  color: var(--color-text-primary) !important;
+}
+
+/* Table text */
+table td,
+table th {
+  color: var(--color-text-primary) !important;
+}
+
+/* Card text */
+.card-title,
+.card-subtitle,
+.card-text {
+  color: var(--color-text-primary) !important;
+}
+
+/* Status text */
+.status-text,
+.badge-text {
+  color: inherit !important;
+}

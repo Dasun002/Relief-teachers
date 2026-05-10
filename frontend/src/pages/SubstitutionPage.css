@@ -1,0 +1,276 @@
+/* Substitution Page Responsive Styles */
+
+.substitution-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+.substitution-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.substitution-title {
+  margin: 0 0 0.5rem 0;
+  color: #1f2937;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.substitution-subtitle {
+  color: #6b7280;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.substitution-date-selector {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  border: 1px solid #e5e7eb;
+}
+
+.substitution-date-selector-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.substitution-date-label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.substitution-tabs {
+  display: flex;
+  border-bottom: 2px solid #e5e7eb;
+  margin-bottom: 2rem;
+  gap: 0.5rem;
+}
+
+.substitution-tab {
+  padding: 1rem 2rem;
+  background-color: transparent;
+  color: var(--primary-700);
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  min-height: 48px;
+  white-space: nowrap;
+}
+
+.substitution-tab:hover {
+  background-color: #f3f4f6;
+}
+
+.substitution-tab.active {
+  background-color: var(--primary-600);
+  color: white;
+  border-bottom-color: var(--primary-700);
+}
+
+.substitution-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.substitution-modal-content {
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow: auto;
+}
+
+.substitution-admin-notice {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ffeaa7;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.substitution-admin-notice p {
+  margin: 0;
+}
+
+.substitution-admin-notice strong {
+  font-weight: 600;
+}
+
+/* Tablet Responsive (768px - 1023px) */
+@media (max-width: 1023px) {
+  .substitution-page {
+    padding: 1.5rem;
+  }
+
+  .substitution-title {
+    font-size: 1.75rem;
+  }
+
+  .substitution-tabs {
+    gap: 0.25rem;
+  }
+
+  .substitution-tab {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .substitution-date-selector {
+    padding: 1.25rem;
+  }
+
+  .substitution-modal-overlay {
+    padding: 1.5rem;
+  }
+}
+
+/* Mobile Responsive (320px - 767px) */
+@media (max-width: 767px) {
+  .substitution-page {
+    padding: 1rem;
+    padding-top: 1rem;
+  }
+
+  .substitution-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .substitution-title {
+    font-size: 1.5rem;
+  }
+
+  .substitution-subtitle {
+    font-size: 0.875rem;
+  }
+
+  .substitution-date-selector {
+    padding: 1rem;
+  }
+
+  .substitution-date-selector-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .substitution-date-label {
+    font-size: 0.9375rem;
+  }
+
+  .substitution-tabs {
+    flex-direction: column;
+    gap: 0;
+    border-bottom: none;
+  }
+
+  .substitution-tab {
+    width: 100%;
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+    border-radius: 0;
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  .substitution-tab.active {
+    border-left: 4px solid var(--primary-600);
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .substitution-modal-overlay {
+    padding: 1rem;
+    align-items: flex-start;
+  }
+
+  .substitution-modal-content {
+    max-height: calc(100vh - 2rem);
+    margin-top: 1rem;
+  }
+
+  .substitution-admin-notice {
+    padding: 0.875rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Small Mobile (320px - 480px) */
+@media (max-width: 480px) {
+  .substitution-page {
+    padding: 0.75rem;
+  }
+
+  .substitution-title {
+    font-size: 1.25rem;
+  }
+
+  .substitution-subtitle {
+    font-size: 0.8125rem;
+  }
+
+  .substitution-date-selector {
+    padding: 0.875rem;
+  }
+
+  .substitution-tab {
+    padding: 0.875rem;
+    font-size: 0.9375rem;
+  }
+
+  .substitution-modal-overlay {
+    padding: 0.5rem;
+  }
+}
+
+/* Large Desktop (1920px+) */
+@media (min-width: 1920px) {
+  .substitution-page {
+    max-width: 1600px;
+  }
+}
+
+/* Touch-friendly enhancements */
+@media (hover: none) and (pointer: coarse) {
+  .substitution-tab {
+    min-height: 52px;
+    padding: 1rem 2rem;
+  }
+
+  .substitution-tab:active {
+    background-color: #e5e7eb;
+  }
+
+  .substitution-tab.active:active {
+    background-color: #2563eb;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .substitution-tab {
+    transition: none;
+  }
+}

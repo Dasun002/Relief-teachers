@@ -1,0 +1,52 @@
+/* Breadcrumbs - Adjusted for Sidebar Layout */
+.breadcrumbs {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: 0.75rem 0;
+  box-shadow: var(--shadow-xs);
+  position: sticky;
+  top: 60px; /* Below the header */
+  z-index: 100;
+}
+
+.breadcrumbs-list {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.breadcrumbs-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.breadcrumbs-link {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: all var(--transition-base);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-md);
+}
+
+.breadcrumbs-link:hover {
+  color: var(--color-primary-hover);
+  background: var(--primary-50);
+}
+
+.breadcrumbs-separator {
+  color: var(--color-text-tertiary);
+  user-select: none;
+}
+
+.breadcrumbs-current {
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+}

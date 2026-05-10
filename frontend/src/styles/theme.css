@@ -1,0 +1,325 @@
+/* Professional Matte Theme for Government Teachers - Moodle Style */
+/* Designed for accessibility, readability, and professional appearance */
+
+:root {
+  /* Primary Colors - Professional Blue (Moodle-inspired) */
+  --primary-50: #f0f4f8;
+  --primary-100: #d9e2ec;
+  --primary-200: #bcccdc;
+  --primary-300: #9fb3c8;
+  --primary-400: #829ab1;
+  --primary-500: #627d98;
+  --primary-600: #486581;
+  --primary-700: #334e68;
+  --primary-800: #243b53;
+  --primary-900: #102a43;
+
+  /* Secondary Colors - Professional Teal */
+  --secondary-50: #f0faf8;
+  --secondary-100: #d1f0e8;
+  --secondary-200: #a8e0d3;
+  --secondary-300: #7dcfbd;
+  --secondary-400: #52bea7;
+  --secondary-500: #2a9d8f;
+  --secondary-600: #1f7a6f;
+  --secondary-700: #165c54;
+  --secondary-800: #0e3f3a;
+  --secondary-900: #072621;
+
+  /* Success Colors - Muted Green */
+  --success-50: #f0f8f4;
+  --success-100: #d4edda;
+  --success-200: #b8e2c4;
+  --success-300: #9cd6ae;
+  --success-400: #7fc998;
+  --success-500: #5cb85c;
+  --success-600: #449d44;
+  --success-700: #398439;
+  --success-800: #2e6b2e;
+  --success-900: #235223;
+
+  /* Warning Colors - Muted Orange */
+  --warning-50: #fff8f0;
+  --warning-100: #ffecd1;
+  --warning-200: #ffd9a3;
+  --warning-300: #ffc675;
+  --warning-400: #ffb347;
+  --warning-500: #f0ad4e;
+  --warning-600: #ec971f;
+  --warning-700: #d58512;
+  --warning-800: #be730c;
+  --warning-900: #a76107;
+
+  /* Error Colors - Muted Red */
+  --error-50: #fef5f5;
+  --error-100: #f8d7da;
+  --error-200: #f1b9be;
+  --error-300: #ea9ba2;
+  --error-400: #e37d86;
+  --error-500: #d9534f;
+  --error-600: #c9302c;
+  --error-700: #ac2925;
+  --error-800: #8f221e;
+  --error-900: #721b17;
+
+  /* Neutral Colors - Warm Gray (Professional) */
+  --neutral-50: #f8f9fa;
+  --neutral-100: #f1f3f5;
+  --neutral-200: #e9ecef;
+  --neutral-300: #dee2e6;
+  --neutral-400: #ced4da;
+  --neutral-500: #adb5bd;
+  --neutral-600: #6c757d;
+  --neutral-700: #495057;
+  --neutral-800: #343a40;
+  --neutral-900: #212529;
+
+  /* Semantic Colors - Matte, No Gradients */
+  --color-primary: var(--primary-600);
+  --color-primary-hover: var(--primary-700);
+  --color-primary-light: var(--primary-100);
+  --color-primary-dark: var(--primary-800);
+  
+  --color-secondary: var(--secondary-600);
+  --color-secondary-hover: var(--secondary-700);
+  --color-secondary-light: var(--secondary-100);
+  
+  --color-success: var(--success-600);
+  --color-success-hover: var(--success-700);
+  --color-success-light: var(--success-100);
+  
+  --color-warning: var(--warning-600);
+  --color-warning-hover: var(--warning-700);
+  --color-warning-light: var(--warning-100);
+  
+  --color-error: var(--error-600);
+  --color-error-hover: var(--error-700);
+  --color-error-light: var(--error-100);
+
+  /* Background Colors - Clean and Professional */
+  --color-background: #ffffff;
+  --color-background-secondary: var(--neutral-50);
+  --color-background-tertiary: var(--neutral-100);
+  --color-background-dark: var(--neutral-800);
+  
+  /* Surface Colors - Matte Finish */
+  --color-surface: #ffffff;
+  --color-surface-hover: var(--neutral-50);
+  --color-surface-active: var(--neutral-100);
+  --color-surface-raised: #ffffff;
+  
+  /* Text Colors - High Contrast for Readability */
+  --color-text-primary: var(--neutral-900);
+  --color-text-secondary: var(--neutral-700);
+  --color-text-tertiary: var(--neutral-600);
+  --color-text-disabled: var(--neutral-400);
+  --color-text-inverse: #ffffff;
+  --color-text-link: var(--primary-600);
+  --color-text-link-hover: var(--primary-700);
+  
+  /* Border Colors - Subtle and Professional */
+  --color-border: var(--neutral-300);
+  --color-border-hover: var(--neutral-400);
+  --color-border-focus: var(--primary-500);
+  --color-border-light: var(--neutral-200);
+  
+  /* NO GRADIENTS - Solid Colors Only */
+  --gradient-primary: var(--primary-600);
+  --gradient-secondary: var(--secondary-600);
+  --gradient-cool: var(--primary-700);
+  --gradient-ocean: var(--secondary-600);
+  --gradient-header: var(--primary-700);
+  
+  /* Shadows - Subtle and Professional */
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 8px 12px 0 rgba(0, 0, 0, 0.1);
+  --shadow-2xl: 0 12px 24px 0 rgba(0, 0, 0, 0.12);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  --shadow-none: none;
+  
+  /* Border Radius - Conservative for Professional Look */
+  --radius-none: 0;
+  --radius-sm: 0.25rem;   /* 4px */
+  --radius-md: 0.375rem;  /* 6px */
+  --radius-lg: 0.5rem;    /* 8px */
+  --radius-xl: 0.625rem;  /* 10px */
+  --radius-2xl: 0.75rem;  /* 12px */
+  --radius-full: 9999px;
+  
+  /* Transitions - Smooth but Not Distracting */
+  --transition-fast: 100ms ease-in-out;
+  --transition-base: 150ms ease-in-out;
+  --transition-slow: 200ms ease-in-out;
+  --transition-slower: 300ms ease-in-out;
+  
+  /* Z-Index Scale */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  
+  /* Typography - Larger for Elderly Users */
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  
+  /* Line Height - Better Readability */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  
+  /* Spacing - Generous for Touch Targets */
+  --spacing-xs: 0.25rem;   /* 4px */
+  --spacing-sm: 0.5rem;    /* 8px */
+  --spacing-md: 1rem;      /* 16px */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2rem;      /* 32px */
+  --spacing-2xl: 3rem;     /* 48px */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Utility Classes - Solid Colors (No Gradients) */
+.gradient-primary {
+  background: var(--gradient-primary);
+}
+
+.gradient-secondary {
+  background: var(--gradient-secondary);
+}
+
+.gradient-cool {
+  background: var(--gradient-cool);
+}
+
+.gradient-ocean {
+  background: var(--gradient-ocean);
+}
+
+.text-gradient {
+  color: var(--primary-600);
+}
+
+/* Animation Classes */
+.animate-fade-in {
+  animation: fadeIn var(--transition-base) ease-out;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp var(--transition-slow) ease-out;
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown var(--transition-slow) ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight var(--transition-slow) ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft var(--transition-slow) ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn var(--transition-base) ease-out;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}

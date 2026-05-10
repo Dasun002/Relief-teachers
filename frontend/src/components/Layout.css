@@ -1,0 +1,63 @@
+/* Layout with Sidebar */
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-main {
+  margin-top: 60px; /* Height of top header */
+  margin-left: 0;
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Desktop: Add left margin for sidebar based on CSS variable */
+@media (min-width: 1024px) {
+  .layout-main {
+    margin-left: var(--sidebar-width, 260px);
+  }
+}
+
+.layout-content {
+  flex: 1;
+  background: var(--color-background-secondary);
+  min-height: calc(100vh - 60px - 48px - 80px); /* viewport - header - breadcrumbs - footer */
+}
+
+.layout-footer {
+  background: var(--primary-700);
+  color: var(--color-text-inverse);
+  padding: 1.5rem 0;
+  margin-top: auto;
+  box-shadow: var(--shadow-lg);
+}
+
+.layout-footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.layout-footer-content p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.layout-footer-links {
+  opacity: 0.8;
+}
+
+.layout-footer-links a {
+  color: var(--color-text-inverse);
+  text-decoration: none;
+  transition: opacity var(--transition-base);
+}
+
+.layout-footer-links a:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}

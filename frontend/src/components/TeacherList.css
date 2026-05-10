@@ -1,0 +1,251 @@
+/* Teacher List - Modern Enhanced Styles */
+
+.teacher-list-container {
+  background: var(--color-surface);
+  padding: 2rem;
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-md);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.teacher-list-container h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: var(--color-text-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.teacher-list-container h2::before {
+  content: '👥';
+  font-size: 1.75rem;
+}
+
+.teacher-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.teacher-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  transition: all var(--transition-base);
+  background: var(--color-background-secondary);
+  animation: fadeInLeft 0.5s ease-out;
+  animation-fill-mode: both;
+  position: relative;
+  overflow: hidden;
+}
+
+.teacher-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--primary-600);
+  transform: scaleY(0);
+  transition: transform var(--transition-base);
+}
+
+.teacher-card:hover::before {
+  transform: scaleY(1);
+}
+
+.teacher-card:nth-child(1) { animation-delay: 0.1s; }
+.teacher-card:nth-child(2) { animation-delay: 0.15s; }
+.teacher-card:nth-child(3) { animation-delay: 0.2s; }
+.teacher-card:nth-child(4) { animation-delay: 0.25s; }
+.teacher-card:nth-child(5) { animation-delay: 0.3s; }
+
+.teacher-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-lg);
+  transform: translateX(4px);
+  background: var(--color-surface);
+}
+
+.teacher-info {
+  flex: 1;
+}
+
+.teacher-name {
+  margin: 0 0 0.5rem 0;
+  color: var(--color-text-primary);
+  font-size: 1.1875rem;
+  font-weight: 600;
+}
+
+.teacher-subjects {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.subjects-label {
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+}
+
+.subjects-list {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.teacher-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btn-action {
+  padding: 0.625rem 1.25rem;
+  border: none;
+  border-radius: var(--radius-lg);
+  font-size: 0.9375rem;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  font-weight: 600;
+  min-height: 44px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-action::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn-action:active::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn-edit {
+  background: var(--primary-600);
+  color: white;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-edit:hover:not(:disabled) {
+  background: var(--primary-700);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.btn-delete {
+  background: var(--error-600);
+  color: white;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-delete:hover:not(:disabled) {
+  background: var(--error-700);
+  box-shadow: var(--shadow-error);
+  transform: translateY(-2px);
+}
+
+.btn-action:disabled {
+  background: var(--secondary-300);
+  color: var(--secondary-600);
+  cursor: not-allowed;
+  opacity: 0.6;
+  box-shadow: none;
+}
+
+.teacher-list-loading,
+.teacher-list-empty {
+  padding: 3rem 2rem;
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.teacher-list-empty {
+  background: var(--color-background-secondary);
+  border-radius: var(--radius-xl);
+  border: 2px dashed var(--color-border);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .teacher-list-container {
+    padding: 1rem;
+  }
+
+  .teacher-list-container h2 {
+    font-size: 1.25rem;
+  }
+
+  .teacher-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .teacher-name {
+    font-size: 1rem;
+  }
+
+  .teacher-subjects {
+    font-size: 0.8125rem;
+  }
+
+  .teacher-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .btn-action {
+    flex: 1;
+    width: 100%;
+    min-height: 48px;
+    font-size: 1rem;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .teacher-list-container {
+    padding: 0.875rem;
+  }
+
+  .teacher-list-container h2 {
+    font-size: 1.125rem;
+  }
+
+  .teacher-card {
+    padding: 0.875rem;
+  }
+}
+
+/* Touch-friendly enhancements */
+@media (hover: none) and (pointer: coarse) {
+  .btn-action {
+    min-height: 52px;
+    padding: 0.75rem 1rem;
+  }
+}

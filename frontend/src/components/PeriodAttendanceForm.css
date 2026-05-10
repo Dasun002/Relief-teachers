@@ -1,0 +1,394 @@
+/* Period Attendance Form Styles */
+
+.period-attendance-container {
+  background-color: var(--color-surface);
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+}
+
+.period-attendance-header {
+  padding: 1rem 1.5rem;
+  background-color: var(--color-background-secondary);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.period-attendance-header h3 {
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+.period-attendance-header p {
+  margin: 0.5rem 0 0 0;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+.period-attendance-body {
+  padding: 1.5rem;
+}
+
+.teacher-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.teacher-card {
+  padding: 1rem;
+  background-color: var(--color-background-secondary);
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.teacher-card:hover {
+  background-color: var(--color-surface-hover);
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.teacher-card-name {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  color: var(--color-text-primary);
+}
+
+.teacher-card-subjects {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.selected-teacher-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: var(--primary-50);
+  border-radius: 8px;
+}
+
+.selected-teacher-info h4 {
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+.selected-teacher-info p {
+  margin: 0.25rem 0 0 0;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.back-button {
+  padding: 0.5rem 1rem;
+  background-color: var(--secondary-600);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.back-button:hover {
+  background-color: var(--secondary-700);
+}
+
+.quick-actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.quick-action-btn {
+  flex: 1;
+  padding: 0.75rem;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.quick-action-btn.absent {
+  background-color: var(--error-600);
+}
+
+.quick-action-btn.absent:hover {
+  background-color: var(--error-700);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-error);
+}
+
+.quick-action-btn.present {
+  background-color: var(--success-600);
+}
+
+.quick-action-btn.present:hover {
+  background-color: var(--success-700);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-success);
+}
+
+.period-item {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #ffffff !important;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+/* Removed dark mode - using light theme only */
+
+.period-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.period-checkbox {
+  width: 20px !important;
+  height: 20px !important;
+  margin-right: 0.75rem;
+  cursor: pointer;
+  accent-color: var(--error-600);
+  transform: scale(1.2);
+  flex-shrink: 0;
+}
+
+.period-info {
+  flex: 1;
+}
+
+.period-title {
+  font-weight: bold !important;
+  font-size: 1.1rem !important;
+  color: #111827 !important;
+  margin-bottom: 0.25rem;
+  line-height: 1.5;
+}
+
+.period-details {
+  font-size: 0.875rem !important;
+  color: #4b5563 !important;
+  line-height: 1.5;
+}
+
+/* Removed dark mode - using light theme only */
+
+.period-status-badge {
+  padding: 0.25rem 0.75rem;
+  color: white;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.period-status-badge.absent {
+  background-color: var(--error-600);
+}
+
+.period-status-badge.present {
+  background-color: var(--success-600);
+}
+
+.substitute-section {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+}
+
+.substitute-allocated {
+  padding: 0.75rem;
+  background-color: var(--success-100);
+  border: 1px solid var(--success-300);
+  border-radius: 4px;
+  color: var(--success-800);
+  text-align: center;
+}
+
+.substitute-loading {
+  text-align: center;
+  padding: 0.5rem;
+  color: var(--color-text-secondary);
+}
+
+.substitute-none {
+  padding: 0.75rem;
+  background-color: var(--error-100);
+  border: 1px solid var(--error-300);
+  border-radius: 4px;
+  color: var(--error-800);
+  text-align: center;
+}
+
+.substitute-select-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.substitute-select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  background-color: #ffffff !important;
+  color: var(--color-text-primary) !important;
+}
+
+.substitute-allocate-btn {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: var(--primary-600);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.2s;
+}
+
+.substitute-allocate-btn:hover:not(:disabled) {
+  background-color: var(--primary-700);
+}
+
+.substitute-allocate-btn:disabled {
+  background-color: var(--secondary-400);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.save-button {
+  padding: 0.75rem 2rem;
+  background-color: var(--primary-600);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.save-button:hover:not(:disabled) {
+  background-color: var(--primary-700);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-primary);
+}
+
+.save-button:disabled {
+  background-color: var(--secondary-400);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.attendance-summary {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: var(--color-background-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  text-align: center;
+  color: var(--color-text-primary);
+}
+
+.attendance-summary strong {
+  color: var(--color-text-primary);
+}
+
+.summary-present {
+  color: var(--success-600);
+  font-weight: 600;
+}
+
+.summary-absent-full {
+  color: var(--error-600);
+  font-weight: 600;
+}
+
+.summary-absent-partial {
+  color: var(--warning-600);
+  font-weight: 600;
+}
+
+.no-schedule-message {
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--color-background-secondary);
+  border: 2px dashed var(--color-border);
+  border-radius: 8px;
+  color: var(--color-text-secondary);
+}
+
+.loading-container {
+  text-align: center;
+  padding: 2rem;
+  color: var(--color-text-secondary);
+}
+
+.error-container {
+  background-color: var(--color-surface);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+
+.error-title {
+  color: var(--color-error);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+}
+
+.warning-container {
+  background-color: var(--warning-100);
+  color: var(--warning-800);
+  border: 1px solid var(--warning-300);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Removed dark mode - using light theme only */
+
+
+/* Additional specificity for text visibility */
+.period-item .period-title,
+div[class*="period"] .period-title {
+  color: #111827 !important;
+  font-weight: 700 !important;
+}
+
+.period-item .period-details,
+div[class*="period"] .period-details {
+  color: #4b5563 !important;
+}
+
+/* Ensure checkbox is always visible */
+.period-item input[type="checkbox"],
+.period-header input[type="checkbox"] {
+  width: 20px !important;
+  height: 20px !important;
+  cursor: pointer !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: inline-block !important;
+}
+
+/* Removed dark mode - using light theme only */

@@ -1,0 +1,183 @@
+/**
+ * Force Light Theme - Override All Dark Mode Styles
+ * This file ensures all inputs have white backgrounds regardless of browser settings
+ */
+
+/* Force light theme globally - override browser dark mode */
+:root {
+  color-scheme: light only !important;
+}
+
+/* Force all inputs, selects, and textareas to have white backgrounds */
+input,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="time"],
+input[type="month"],
+input[type="week"],
+textarea,
+select,
+.attendance-history-input,
+.attendance-history-select,
+.substitute-select,
+.login-input,
+.form-control,
+.input,
+input.input,
+select.select {
+  background-color: #ffffff !important;
+  color: #1f2937 !important;
+  -webkit-text-fill-color: #1f2937 !important;
+  border: 1px solid #d1d5db !important;
+  opacity: 1 !important;
+}
+
+/* Force placeholder text to be visible */
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+  color: #9ca3af !important;
+  opacity: 0.7 !important;
+  -webkit-text-fill-color: #9ca3af !important;
+}
+
+/* Force focus states */
+input:focus,
+textarea:focus,
+select:focus {
+  background-color: #ffffff !important;
+  color: #1f2937 !important;
+  border-color: var(--primary-500, #627d98) !important;
+  box-shadow: 0 0 0 3px var(--primary-100, #d9e2ec) !important;
+  outline: none !important;
+}
+
+/* Force autofill to have white background */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: #1f2937 !important;
+  -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+  box-shadow: 0 0 0 1000px #ffffff inset !important;
+  background-color: #ffffff !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+}
+
+/* Force select dropdown options */
+select option {
+  background-color: #ffffff !important;
+  color: #1f2937 !important;
+}
+
+/* Force disabled state to still be readable */
+input:disabled,
+textarea:disabled,
+select:disabled {
+  background-color: #f3f4f6 !important;
+  color: #6b7280 !important;
+  opacity: 0.7 !important;
+  cursor: not-allowed !important;
+}
+
+/* Override any dark mode media queries */
+@media (prefers-color-scheme: dark) {
+  input,
+  textarea,
+  select,
+  .attendance-history-input,
+  .attendance-history-select,
+  .substitute-select,
+  .login-input {
+    background-color: #ffffff !important;
+    color: #1f2937 !important;
+    border-color: #d1d5db !important;
+    -webkit-text-fill-color: #1f2937 !important;
+  }
+
+  input::placeholder,
+  textarea::placeholder,
+  select::placeholder {
+    color: #9ca3af !important;
+    -webkit-text-fill-color: #9ca3af !important;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-text-fill-color: #1f2937 !important;
+    -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+    box-shadow: 0 0 0 1000px #ffffff inset !important;
+  }
+
+  select option {
+    background-color: #ffffff !important;
+    color: #1f2937 !important;
+  }
+}
+
+/* Override any data-theme attributes */
+[data-theme="dark"] input,
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+  background-color: #ffffff !important;
+  color: #1f2937 !important;
+  border-color: #d1d5db !important;
+}
+
+/* Force calendar picker icons to be visible */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="datetime-local"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(0) !important;
+  opacity: 0.7 !important;
+  cursor: pointer !important;
+}
+
+/* Force select dropdown arrow */
+select {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23334e68' d='M6 9L1 4h10z'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 0.75rem center !important;
+  background-size: 12px !important;
+  padding-right: 2.5rem !important;
+}
+
+/* Ensure labels are visible */
+label {
+  color: #374151 !important;
+}
+
+/* Ensure all form elements have proper contrast */
+.form-group,
+.input-group,
+.form-control {
+  color: #1f2937 !important;
+}
+
+/* Override any component-specific dark backgrounds */
+.period-item,
+.teacher-card,
+.attendance-card,
+.substitution-card {
+  background-color: #ffffff !important;
+}
+
+/* Ensure text in cards is visible */
+.card,
+.card-body,
+.card-content {
+  background-color: #ffffff !important;
+  color: #1f2937 !important;
+}

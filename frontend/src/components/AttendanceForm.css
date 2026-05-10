@@ -1,0 +1,290 @@
+/* Attendance Form - Modern Enhanced Styles */
+
+.attendance-form-container {
+  background: var(--color-surface);
+  padding: 2rem;
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+  animation: fadeInUp 0.6s ease-out 0.4s both;
+  transition: all var(--transition-base);
+}
+
+.attendance-form-container:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.attendance-form-title {
+  margin: 0 0 1.5rem 0;
+  color: var(--color-text-primary);
+  font-size: 1.375rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.attendance-form-title::before {
+  content: '✓';
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--primary-600);
+  color: white;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.attendance-teacher-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.attendance-teacher-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background: var(--color-background-secondary);
+  transition: all var(--transition-base);
+  animation: fadeInLeft 0.5s ease-out;
+  animation-fill-mode: both;
+}
+
+.attendance-teacher-item:nth-child(1) { animation-delay: 0.1s; }
+.attendance-teacher-item:nth-child(2) { animation-delay: 0.15s; }
+.attendance-teacher-item:nth-child(3) { animation-delay: 0.2s; }
+.attendance-teacher-item:nth-child(4) { animation-delay: 0.25s; }
+.attendance-teacher-item:nth-child(5) { animation-delay: 0.3s; }
+
+.attendance-teacher-item:hover {
+  background: var(--color-surface);
+  border-color: var(--color-primary);
+  transform: translateX(4px);
+  box-shadow: var(--shadow-sm);
+}
+
+.attendance-teacher-name {
+  font-weight: 600;
+  color: var(--color-text-primary);
+  font-size: 1.0625rem;
+}
+
+.attendance-status-buttons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.attendance-status-btn {
+  padding: 0.625rem 1.25rem;
+  border: 2px solid transparent;
+  border-radius: var(--radius-lg);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  min-height: 44px;
+  min-width: 90px;
+  position: relative;
+  overflow: hidden;
+}
+
+.attendance-status-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.attendance-status-btn:active::before {
+  width: 300px;
+  height: 300px;
+}
+
+.attendance-status-btn.present {
+  background: var(--success-100);
+  color: var(--success-800);
+  border-color: var(--success-300);
+}
+
+.attendance-status-btn.present:hover:not(.active) {
+  background: var(--success-200);
+  border-color: var(--success-400);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-success);
+}
+
+.attendance-status-btn.present.active {
+  background: var(--success-600);
+  color: white;
+  border-color: var(--success-600);
+  box-shadow: var(--shadow-sm);
+}
+
+.attendance-status-btn.absent {
+  background: var(--error-100);
+  color: var(--error-800);
+  border-color: var(--error-300);
+}
+
+.attendance-status-btn.absent:hover:not(.active) {
+  background: var(--error-200);
+  border-color: var(--error-400);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-error);
+}
+
+.attendance-status-btn.absent.active {
+  background: var(--error-600);
+  color: white;
+  border-color: var(--error-700);
+  box-shadow: var(--shadow-error);
+}
+
+.attendance-submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background: var(--primary-600);
+  color: white;
+  border: none;
+  border-radius: var(--radius-lg);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  min-height: 52px;
+  box-shadow: var(--shadow-md);
+}
+
+.attendance-submit-btn:hover:not(:disabled) {
+  background: var(--primary-700);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.attendance-submit-btn:disabled {
+  background: var(--secondary-400);
+  cursor: not-allowed;
+  opacity: 0.7;
+  box-shadow: none;
+}
+
+.attendance-loading,
+.attendance-empty {
+  padding: 3rem 2rem;
+  text-align: center;
+  color: var(--color-text-secondary);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.attendance-empty {
+  background: var(--color-background-secondary);
+  border-radius: var(--radius-xl);
+  border: 2px dashed var(--color-border);
+}
+
+/* Tablet Responsive (768px - 1023px) */
+@media (max-width: 1023px) {
+  .attendance-form-container {
+    padding: 1.25rem;
+  }
+
+  .attendance-teacher-item {
+    padding: 0.875rem;
+  }
+}
+
+/* Mobile Responsive (320px - 767px) */
+@media (max-width: 767px) {
+  .attendance-form-container {
+    padding: 1rem;
+  }
+
+  .attendance-form-title {
+    font-size: 1.125rem;
+  }
+
+  .attendance-teacher-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .attendance-teacher-name {
+    font-size: 0.9375rem;
+  }
+
+  .attendance-status-buttons {
+    width: 100%;
+  }
+
+  .attendance-status-btn {
+    flex: 1;
+    min-height: 48px;
+    font-size: 1rem;
+  }
+
+  .attendance-submit-btn {
+    padding: 1rem;
+    font-size: 1.0625rem;
+    min-height: 52px;
+  }
+}
+
+/* Small Mobile (320px - 480px) */
+@media (max-width: 480px) {
+  .attendance-form-container {
+    padding: 0.875rem;
+  }
+
+  .attendance-form-title {
+    font-size: 1rem;
+  }
+
+  .attendance-teacher-item {
+    padding: 0.875rem;
+  }
+
+  .attendance-status-btn {
+    font-size: 0.9375rem;
+    min-width: 70px;
+  }
+}
+
+/* Touch-friendly enhancements */
+@media (hover: none) and (pointer: coarse) {
+  .attendance-status-btn {
+    min-height: 52px;
+    padding: 0.75rem 1rem;
+  }
+
+  .attendance-submit-btn {
+    min-height: 56px;
+  }
+
+  .attendance-status-btn:active {
+    transform: scale(0.98);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .attendance-teacher-item,
+  .attendance-status-btn,
+  .attendance-submit-btn {
+    transition: none;
+  }
+}
