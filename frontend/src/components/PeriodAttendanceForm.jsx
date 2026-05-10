@@ -28,6 +28,12 @@ const PeriodAttendanceForm = ({ selectedDate, onAttendanceSubmitted }) => {
   useEffect(() => {
     if (selectedDate) {
       fetchTeachers();
+      // Reset teacher selection and schedule when date changes
+      setSelectedTeacher(null);
+      setScheduleData(null);
+      setAbsentPeriods([]);
+      setSelectedSubstitutes({});
+      setFreeTeachers({});
     }
   }, [selectedDate]);
 
