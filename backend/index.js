@@ -30,13 +30,21 @@ app.use((req, res, next) => {
   next();
 });
 
-// Basic health check route
+// Basic health check routes (for Render and general use)
 app.get('/health', (req, res) => {
   res.json({ 
     status: 'ok', 
     message: 'Server is running',
     environment: config.nodeEnv,
     timestamp: new Date().toISOString()
+  });
+});
+
+// Health check route for Render internal health check
+app.get('/api/health', (req, res) => {
+  res.status(200).json({ 
+    status: 'ok', 
+    message: 'Server is running perfectly'
   });
 });
 
