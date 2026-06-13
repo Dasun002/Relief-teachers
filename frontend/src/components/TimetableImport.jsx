@@ -6,6 +6,9 @@ import { useToast } from '../contexts/ToastContext';
 import LoadingSpinner from './LoadingSpinner';
 import { timetableAPI } from '../services/api';
 
+// Get API URL from environment variable
+const API_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+
 const TimetableImport = ({ onImportSuccess }) => {
   const { user } = useAuth();
   const toast = useToast();
@@ -60,7 +63,7 @@ const TimetableImport = ({ onImportSuccess }) => {
       setProgressPercentage(33);
 
       // Call the import API with FormData
-      const response = await fetch('http://localhost:5000/api/timetable/import', {
+      const response = await fetch(`${API_URL}/timetable/import`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
