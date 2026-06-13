@@ -59,6 +59,8 @@ Your application has:
 
 Example: `mongodb+srv://admin:YOUR_PASSWORD@teacher-attendance.xxxxx.mongodb.net/?retryWrites=true&w=majority`
 
+Key: MONGODB_URI | Value: mongodb+srv://dasun_db_user:icCSX2AeiFBHiCXs@dasundatabase.xcakikk.mongodb.net/teacher-attendance?appName=DasunDataBase
+
 ---
 
 ## Part 2: Backend Deployment (Render)
