@@ -14,9 +14,9 @@ router.post('/login', loginController);
 
 /**
  * @route   POST /api/auth/register
- * @desc    Register new user (admin only)
- * @access  Private (Admin)
+ * @desc    Register new user (temporarily public for admin creation)
+ * @access  Public (TEMPORARY - REVERT AFTER ADMIN CREATION)
  */
-router.post('/register', authenticate, requireAdmin, registerController);
+router.post('/register', registerController);
 
 export default router;
